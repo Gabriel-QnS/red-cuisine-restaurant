@@ -499,7 +499,7 @@ footer{
 /* Additional fixes */
 
 section{
-    min-height: fit-content;
+    min-height: 600px;
 
 }
 
