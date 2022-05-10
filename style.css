@@ -264,6 +264,7 @@ nav img{
 
 .images article {
     height: 40vh;
+    min-height: 300px;
     width: 15vw;
     background-color: brown;
     background-size: cover;
@@ -583,5 +584,11 @@ section{
 
     .mediaHolder{
         font-size: 80%;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .about .wrap{
+        margin: 0 auto;
     }
 }
