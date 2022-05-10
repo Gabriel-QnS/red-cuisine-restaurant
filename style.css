@@ -99,6 +99,7 @@ main {
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
+    max-width: 100vw;
 }
 
 main h2{
@@ -135,9 +136,7 @@ nav img{
 }
 
 .welcome{
-    height: fill;
-    padding: 8rem;
-    width: 50%;
+    justify-self: center;
 }
 
 .welcome h1{
@@ -155,11 +154,13 @@ nav img{
     width: fit-content;
     border: gray 1px solid;
     padding-left: 1rem;
+    margin: auto;
 }
 
 .searchbox input{
     border: none;
     width: 25vw;
+    min-width: 200px;
     padding: 0rem 1rem;
     height: 100%;
 }
@@ -172,6 +173,7 @@ nav img{
 
 .socialMedia{
     display: flex;
+    justify-content: center;
 }
 
 .socialMedia > * {
@@ -195,6 +197,7 @@ nav img{
     height: 100vh;
     background-image: url("./images/border-red.jpg");
     background-size: cover;
+    background-position: center;
 }
 
 .about .wrap {
@@ -237,6 +240,7 @@ nav img{
 
 .choices div {
     width: 10vw;
+    min-width: 100px;
     text-align: center;
     border: #333 0 solid;
     padding: 1rem;
@@ -255,8 +259,7 @@ nav img{
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 3rem;
-    
+    padding: 3rem; 
 }
 
 .images article {
@@ -492,5 +495,76 @@ footer{
     font-style: italic;
 }
 
+/* Additional fixes */
+
+section{
+    min-height: fit-content;
+
+}
+
 /* Responsive */
 
+@media screen and (max-width: 800px) {
+    nav{
+        max-width: 390px;
+        justify-content: center;
+    }
+
+    .socialMedia{
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+    }
+
+    .socialMedia:before{
+        content: "Follow us:";
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .respHide{
+        display: none;
+    }
+
+    h2{
+        font-size: 180%;
+    }
+
+    .welcome{
+        width: 100%;
+        max-width: 390px;
+        justify-self: left;
+    }
+
+    .about .wrap {
+        width: 90%;
+        padding: 4rem 1rem;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .he1{
+        font-size: 150%;
+        background-color: white;
+        color: orangered
+    }
+
+    .images {
+        padding: 1rem 0.5rem; 
+    }
+
+    .images article {
+        min-width: 80px;
+        margin: 0;
+        transition: 0.3s;
+        overflow: hidden;
+    }
+
+    .images article .content * {
+        transform: scale(0.6)
+    }
+
+    .mockVideo{
+       max-width: 300px;
+       margin: 8rem auto 0 auto;
+    }
+}
